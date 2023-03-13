@@ -140,7 +140,7 @@ func run(filePath string, targetDateStr string) {
 			price := coingecko.QueryCoingeckoApi(coinSymbol, targetDateStr)
 			valueInEur := value * price.Eur
 			totalInvestmentEuro += valueInEur
-			fmt.Printf("#%s: %f, Price: %f ### Value Euro: %f Eur\n", coin, value, valueInEur, value*price.Eur)
+			fmt.Printf("#%s: %f, Price: %f ### Value Euro: %f Eur\n", coin, value, price.Eur, valueInEur)
 		} else {
 			totalInvestmentEuro += value
 			fmt.Printf("#%s: %f Eur\n", coin, value)
